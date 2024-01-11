@@ -120,28 +120,13 @@ export const projectDetailData = [
     detailimginfo: [
       {
         imgurl:
-          'https://github.com/Jinga02/ChallengePJT/assets/110621233/75e6a49b-b8b7-463f-b919-19e3868b992a',
-        subject: '로그인 화면',
+          'https://raw.githubusercontent.com/twoong01/my_portfolio/main/src/assets/images/STT.gif',
+        subject: 'STT 기능',
       },
       {
         imgurl:
-          'https://github.com/Jinga02/ChallengePJT/assets/110621233/d8472f5e-2f80-4cf4-b694-16b6c51d0487',
-        subject: '취향 선택 화면',
-      },
-      {
-        imgurl:
-          'https://github.com/Jinga02/ChallengePJT/assets/110621233/720c800b-660c-44f2-bc46-cfd42e803501',
-        subject: '취향 선택 화면',
-      },
-      {
-        imgurl:
-          'https://github.com/Jinga02/ChallengePJT/assets/110621233/98fad0d3-346e-465c-b3dd-9ad542e9fa52',
-        subject: '코스 조회 화면',
-      },
-      {
-        imgurl:
-          'https://github.com/Jinga02/ChallengePJT/assets/110621233/02f330ef-3d06-4c0a-8ffd-736bf8f7faab',
-        subject: '코스 만들기 화면',
+          'https://raw.githubusercontent.com/twoong01/my_portfolio/main/src/assets/images/game.gif',
+        subject: '프로필 화면 및 뽑기 기능',
       },
     ],
   },

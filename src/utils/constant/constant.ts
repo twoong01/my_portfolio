@@ -1,5 +1,5 @@
 export const ICON_URL =
-  'https://raw.githubusercontent.com/jieun419/jieun_portfolio/main/src/assets/icons/icon_';
+  'https://raw.githubusercontent.com/twoong01/my_portfolio/main/src/assets/icons/icon_';
 
 export const UPDATE_DATA = '24. 01. 09';
 export const EMAILL = 'omygog@naver.com';
