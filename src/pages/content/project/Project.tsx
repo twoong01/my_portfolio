@@ -25,13 +25,12 @@ export const ProjectComponent = tw.article`
 `;
 
 function Project({ id, navTabs }: TabsPropsT) {
-
   const isModal = useSelector((state: RootState) => state.overlay.isOpen);
   const { scrollRef, scrollEl } = useScrollAnimation();
 
   return (
     <>
-      {isModal && (
+      {isModal &&
         projectDetailData.map((item, idx) => (
           <ProjectDetail
             key={idx}
@@ -46,17 +45,18 @@ function Project({ id, navTabs }: TabsPropsT) {
             detailimginfo={item.detailimginfo}
             giturl={item.giturl}
             depoloyurl={item.depoloyurl}
-            blogurl={item.blogurl}
             tools={item.tools}
             featinfo={item.featinfo}
             parts={item.parts}
           />
-        ))
-      )}
+        ))}
 
-      <ScrollAni className={`${scrollEl ? 'fadeAn fadeIn' : 'fadeOut'}`} ref={scrollRef}>
-        <ProjectComponent id={id} ref={navTabs[0].targetRef} >
-          {projectData.map((item, idx) => 
+      <ScrollAni
+        className={`${scrollEl ? 'fadeAn fadeIn' : 'fadeOut'}`}
+        ref={scrollRef}
+      >
+        <ProjectComponent id={id} ref={navTabs[0].targetRef}>
+          {projectData.map((item, idx) => (
             <ProjectCard
               key={idx}
               name={item.name}
@@ -67,7 +67,7 @@ function Project({ id, navTabs }: TabsPropsT) {
               giturl={item.giturl}
               depoloyurl={item.depoloyurl}
             />
-          )}
+          ))}
         </ProjectComponent>
       </ScrollAni>
     </>
