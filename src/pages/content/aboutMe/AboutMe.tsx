@@ -6,7 +6,6 @@ import { motion, useScroll, useTransform } from 'framer-motion';
 import myImgIm from '../../../assets/images/taewoong_im.png';
 import StackIcon from '../../../components/atoms/tools/ToolIcon';
 import { StackData } from '../../../data/introData';
-import ReviewDetail from '../../detail/ReviewDetail';
 import { RootState } from '../../../store';
 import { positionActions } from '../../../store/position-slice';
 import { isMobile } from '../../../utils/isMobile';
@@ -154,8 +153,6 @@ function AboutMe() {
   return (
     <motion.div ref={moScrollRef}>
       <IntroComponent id="aboutme">
-        {isModal && <ReviewDetail name="review" />}
-
         <SubJectTit>About me</SubJectTit>
         <ScrollAni
           className={`${scrollEl ? 'fadeAn fadeIn' : 'fadeOut'}`}

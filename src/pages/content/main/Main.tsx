@@ -73,7 +73,7 @@ function Main() {
           transition={{ ...ANI_TRANSITION, delay: 3 }}
           src={myImg}
           ismobile={ismobile}
-          alt="최지은 인물 사진"
+          alt="윤태웅 인물 사진"
         />
 
         <InfoWrap delay={3} />
