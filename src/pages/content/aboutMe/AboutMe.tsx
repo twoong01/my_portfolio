@@ -1,6 +1,6 @@
 import tw from 'tailwind-styled-components';
 import { useDispatch, useSelector } from 'react-redux';
-import { useRef, useState } from 'react';
+import { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 
 import myImgIm from '../../../assets/images/taewoong_im.png';
@@ -137,7 +137,6 @@ function AboutMe() {
   const dispatch = useDispatch();
   const isModal = useSelector((state: RootState) => state.overlay.isOpen);
   const moScrollRef = useRef<HTMLDivElement>(null);
-  const [isImgChange, setIsImgChange] = useState(false);
 
   const { scrollRef, scrollEl } = useScrollAnimation();
 
@@ -151,10 +150,6 @@ function AboutMe() {
       ? dispatch(positionActions.PositionStyle('relative'))
       : dispatch(positionActions.PositionStyle('sticky'));
   });
-
-  const handelImgChange = () => {
-    setIsImgChange((prev) => !prev);
-  };
 
   return (
     <motion.div ref={moScrollRef}>
