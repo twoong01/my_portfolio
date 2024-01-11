@@ -1,13 +1,13 @@
-import tw from 'tailwind-styled-components';
 import { useSelector } from 'react-redux';
-import ProjectDetail from '../../detail/ProjectDetail';
-import { RootState } from '../../../store';
-import { TabsPropsT } from '../../../types/type';
+import tw from 'tailwind-styled-components';
+import ProjectCard from '../../../components/cards/ProjectCard';
 import { projectData } from '../../../data/content/projectData';
 import { projectDetailData } from '../../../data/content/projectDetailData';
-import ProjectCard from '../../../components/cards/ProjectCard';
 import useScrollAnimation from '../../../hooks/useScrollAnimation';
+import { RootState } from '../../../store';
 import ScrollAni from '../../../styles/ScrollAni';
+import { TabsPropsT } from '../../../types/type';
+import ProjectDetail from '../../detail/ProjectDetail';
 
 export const ProjectComponent = tw.article`
   grid
@@ -56,7 +56,7 @@ function Project({ id, navTabs }: TabsPropsT) {
 
       <ScrollAni className={`${scrollEl ? 'fadeAn fadeIn' : 'fadeOut'}`} ref={scrollRef}>
         <ProjectComponent id={id} ref={navTabs[0].targetRef} >
-          {projectData.map((item, idx) => (
+          {projectData.map((item, idx) => 
             <ProjectCard
               key={idx}
               name={item.name}
@@ -67,7 +67,7 @@ function Project({ id, navTabs }: TabsPropsT) {
               giturl={item.giturl}
               depoloyurl={item.depoloyurl}
             />
-          ))}
+          )}
         </ProjectComponent>
       </ScrollAni>
     </>
