@@ -1,12 +1,11 @@
 import tw from 'tailwind-styled-components';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 
 import myImgIm from '../../../assets/images/taewoong_im.png';
 import StackIcon from '../../../components/atoms/tools/ToolIcon';
 import { StackData } from '../../../data/introData';
-import { RootState } from '../../../store';
 import { positionActions } from '../../../store/position-slice';
 import { isMobile } from '../../../utils/isMobile';
 import ScrollAni from '../../../styles/ScrollAni';
@@ -134,7 +133,6 @@ export const StackIcons = tw.div`
 
 function AboutMe() {
   const dispatch = useDispatch();
-  const isModal = useSelector((state: RootState) => state.overlay.isOpen);
   const moScrollRef = useRef<HTMLDivElement>(null);
 
   const { scrollRef, scrollEl } = useScrollAnimation();
