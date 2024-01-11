@@ -1,14 +1,16 @@
 export const projectDetailData = [
   {
-    name: 'ssthing',
-    pointcolor: 'before:bg-[#373737]',
-    title: 'SSTHING',
+    name: '누비오(NUBIO)',
+    pointcolor: 'before:bg-[#41D992]',
+    title: 'NUBIO',
+    imgurl: 'https://raw.githubusercontent.com/twoong01/my_portfolio/main/src/assets/images/thumbnail_nubio.webp',
     subtext:
-      '우주가 컨셉인 회사 소개 홈페이지입니다.\n디자인 시안을 figma로 확인하며 짧은 작업 기간 안에 최대한 클라이언트가 요구한 기능을 작업하려고 했습니다.',
-    data: '2023.10 - 약 3일',
-    team: '2인 (프론트엔드 2명)',
+      '안전 지도 공유 서비스 플랫폼입니다.\n재난 및 재해에 대해서 대피소와 안전한 길을 추천해주며, 데이트 코스를 만들며 공유할 수 있습니다.',
+    data: '2023.08 - 2023.10 약 7주 ',
+    team: '6인 (프론트엔드 2명, 백엔드 4명)',
     tag: ['팀', '반응형', '퍼블리싱'],
-    depoloyurl: 'https://ssting.io/',
+    giturl: 'https://github.com/Nubi0/Nubio',
+    depoloyurl: 'www.nubi0.com',
     tools: [
       {
         title: 'React',
@@ -27,19 +29,21 @@ export const projectDetailData = [
       },
     ],
     featinfo: [
-      '우주를 컨셉으로한 홈페이지',
+      '안전 공유 지도를 컨셉',
       'nav 메뉴 클릭 시 원하는 영역으로 이동',
+      '카카오 맵 API를 활용해 장소 표시 및 검색',
+      '다른 사용자의 코스를 보고 즐겨찾기 및 추천 기능'
     ],
     parts: [
       {
-        title: '헤더, nav 메뉴 작업',
+        title: '로그인 및 회원가입 화면',
         detail:
-          '각 메뉴 클릭 시 해당 섹션으로 이동 되도록했습니다. 또한 서브페이지에서도 해당 메뉴 클릭 시 메인에서 해당 영역으로 이동 되도록 localStorage에 위치를 저장해 해당 위치로 자동 이동 할  수 있도록 구현했습니다.',
+          '소셜 로그인 및 회원가입, 자체 로그인 및 회원가입을 구현하였습니다.\nJWT 토큰을 어떤 방식으로 발급하고 재발급할 때 사용자에게 불편한 부분이 없도록 하기위해 노력했습니다.',
       },
       {
-        title: '웹 표준 / 접근성 고려 및 퍼블리싱',
+        title: '데이트 코스 모드 화면',
         detail:
-          '디자인된 웹 페이지를 마크업하여 웹 표준을 준수하고 웹 접근성을 고려하며 진행했습니다.\n각 섹션을 팀원과 나눠 PC 부터 Mobile 환경까지 반응형 작업하고 이미지 최적화에 신경쓰며 사용자 경험을 고려했습니다.\n또한 디자이너가 요구한 시안을 확인하며 배경 위치를 섬세하게 조절했습니다.',
+          '데이트 코스를 생성하고 공유하는 화면을 구현하였습니다.\n사용자들의 취향에 맞는 코스를 필터링하고 한 눈에 볼 수 있도록 구현하기 위해 노력했습니다.',
       },
     ],
   },

@@ -12,6 +12,16 @@ export const recordData = [
     stacks: ['html', 'css', 'javascript', 'react', 'vue', 'github', 'figma'],
   },
   {
+    data: '2023.10 - 2023.11',
+    title: '우아한테크코스',
+    role: '우아한테크코스 웹 프론트엔드 프리코스 4주 참여',
+    infos: [
+      '매주 새로운 바닐라 자바스크립트 기반 토이 프로젝트 진행',
+      'Jest를 활용한 테스트 코드 작성',
+      '모듈화 및 구조설계 연습',
+    ]
+  },
+  {
     data: '2017.03 - 2023.02',
     title: '영남대학교',
     role: '@ 로봇기계공학과 학사 졸업',
