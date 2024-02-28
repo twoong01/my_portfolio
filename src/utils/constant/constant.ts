@@ -1,5 +1,5 @@
 export const ICON_URL =
-  'https://raw.githubusercontent.com/jieun419/jieun_portfolio/main/src/assets/icons/icon_';
+  'https://raw.githubusercontent.com/twoong01/my_portfolio/main/src/assets/icons/icon_';
 
 export const UPDATE_DATA = '24. 01. 09';
 export const EMAILL = 'omygog@naver.com';
@@ -31,7 +31,7 @@ export const socialLink = [
     id: 2,
     datatooltip: '이력서 보기',
     tooltiptype: 'bottom',
-    href: 'https://docs.google.com/document/d/1ahAvIVKQe9wBEwYYQG86Ks8-ScnuFFCQ2255TEVhSoo/edit?usp=sharing',
+    href: 'https://drive.google.com/file/d/1lL3XB1afIlQDFJZ58nf9Kc15iwyg1nmS/view?usp=drive_link',
     arialabel: 'Resume',
     target: '_blank',
   },

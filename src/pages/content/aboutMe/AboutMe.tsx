@@ -1,6 +1,6 @@
 import { motion, useScroll, useTransform } from 'framer-motion';
-import { useRef, useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useRef } from 'react';
+import { useDispatch } from 'react-redux';
 import tw from 'tailwind-styled-components';
 
 import myImgIm from '../../../assets/images/taewoong_im.png';
@@ -9,11 +9,9 @@ import { BoldUnderLineTxt } from '../../../components/atoms/text/BoldUnderLine';
 import StackIcon from '../../../components/atoms/tools/ToolIcon';
 import { StackData } from '../../../data/introData';
 import useScrollAnimation from '../../../hooks/useScrollAnimation';
-import { RootState } from '../../../store';
 import { positionActions } from '../../../store/position-slice';
 import ScrollAni from '../../../styles/ScrollAni';
 import { isMobile } from '../../../utils/isMobile';
-import ReviewDetail from '../../detail/ReviewDetail';
 
 export const IntroComponent = tw.main`
   relative
@@ -138,9 +136,7 @@ export const SkillBox = tw.div`
 
 function AboutMe() {
   const dispatch = useDispatch();
-  const isModal = useSelector((state: RootState) => state.overlay.isOpen);
   const moScrollRef = useRef<HTMLDivElement>(null);
-  const [isImgChange, setIsImgChange] = useState(false);
 
   const { scrollRef, scrollEl } = useScrollAnimation();
 
@@ -155,15 +151,9 @@ function AboutMe() {
       : dispatch(positionActions.PositionStyle('sticky'));
   });
 
-  const handelImgChange = () => {
-    setIsImgChange((prev) => !prev);
-  };
-
   return (
     <motion.div ref={moScrollRef}>
       <IntroComponent id="aboutme">
-        {isModal && <ReviewDetail name="review" />}
-
         <SubJectTit>About me</SubJectTit>
         <ScrollAni
           className={`${scrollEl ? 'fadeAn fadeIn' : 'fadeOut'}`}
