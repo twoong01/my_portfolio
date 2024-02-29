@@ -1,17 +1,17 @@
-import { motion, useScroll, useTransform } from 'framer-motion';
-import { useRef } from 'react';
-import { useDispatch } from 'react-redux';
 import tw from 'tailwind-styled-components';
+import { useDispatch } from 'react-redux';
+import { useRef } from 'react';
+import { motion, useScroll, useTransform } from 'framer-motion';
 
 import myImgIm from '../../../assets/images/taewoong_im.png';
-import { TagTxt } from '../../../components/atoms/tag/TagTxt';
-import { BoldUnderLineTxt } from '../../../components/atoms/text/BoldUnderLine';
 import StackIcon from '../../../components/atoms/tools/ToolIcon';
 import { StackData } from '../../../data/introData';
-import useScrollAnimation from '../../../hooks/useScrollAnimation';
 import { positionActions } from '../../../store/position-slice';
-import ScrollAni from '../../../styles/ScrollAni';
 import { isMobile } from '../../../utils/isMobile';
+import ScrollAni from '../../../styles/ScrollAni';
+import useScrollAnimation from '../../../hooks/useScrollAnimation';
+import { TagTxt } from '../../../components/atoms/tag/TagTxt';
+import { BoldUnderLineTxt } from '../../../components/atoms/text/BoldUnderLine';
 
 export const IntroComponent = tw.main`
   relative
@@ -111,12 +111,14 @@ export const StackSpacing = tw.div`
 
 export const Stacks = tw(StackSpacing)`
   flex-col
-  mt-10
-  text-white
 `;
 
 export const StackWrap = tw.div`
-  h-10
+  grid 
+  grid-cols-3 
+  gap-4
+
+  max-md:grid-cols-1  
 `;
 
 export const StackBox = tw.div`
@@ -128,11 +130,6 @@ export const StackIcons = tw.div`
   gap-1
   w-full
 `;
-
-export const SkillBox = tw.div`
-  border-2px
-  border-white
-`
 
 function AboutMe() {
   const dispatch = useDispatch();
@@ -198,13 +195,10 @@ function AboutMe() {
                 </MyMindTxt>
               </MyMind>
 
-              
-            </RightWrap>
-          </Content>
-          <Stacks>
+              <Stacks>
                 <Tit>Skill & Tools</Tit>
                 <StackWrap>
-                  {/* {
+                  {
                     //* key = 제목, stacks = 기술 스택
                     Object.entries(StackData.stack).map(
                       ([key, stacks], idx) => (
@@ -222,21 +216,11 @@ function AboutMe() {
                         </StackBox>
                       ),
                     )
-                  } */}
-                  <SkillBox>
-                    {Object.entries(StackData.stack).map(([key, stacks], idx) => (
-                      <StackBox key={idx}>
-                        <SubTit>{key}</SubTit>
-                        <StackIcons>
-                          {stacks.map((stack) => (
-                            <StackIcon key={stack} stack={stack} width={`w-[calc(100% - 5%)]`} />
-                          ))}
-                        </StackIcons>
-                      </StackBox>
-                    ))}
-                  </SkillBox>
+                  }
                 </StackWrap>
               </Stacks>
+            </RightWrap>
+          </Content>
         </ScrollAni>
       </IntroComponent>
     </motion.div>

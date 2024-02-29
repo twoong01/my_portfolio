@@ -32,7 +32,7 @@ function StackIcon({ stack, width }: StackIconProps) {
     <IconBox width={width}>
       <Img src={`${ICON_URL}${stack}.svg`} alt={`${stack}`} />
     </IconBox>
-  )
+  );
 }
 
 export default StackIcon;
